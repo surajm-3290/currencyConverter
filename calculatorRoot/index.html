@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/calculatorRoot/style.css">
 </head>
 <body>
     <header>
@@ -31,8 +28,8 @@
                         <h3>From:</h3>
                         <div class="selectContainer">
                             <div id="fromFlagImg">Flag</div>
-                            <select>
-                                
+                            <select id="selectFrom" required>
+                                <option value="select" disabled selected>Select Country</option>
                             </select>
                         </div>
                         <input type="number" class="inputstyle" id="fromInput" required>
@@ -45,11 +42,11 @@
                         <div id="fromFlagImg">Flag</div>
                         <div class="selectContainer">
                             <div id="fromFlagImg"></div>
-                            <select>
-                                
+                            <select  id="selectTo">
+                                <option value="select" disabled selected>Select County</option>
                             </select>
                         </div>
-                        <input type="number" class="inputstyle" id="fromInput" readonly>
+                        <input type="number" class="inputstyle" id="toOutput" readonly>
                     </div>
                 </div>
                 <button id="convert">Convert</button>
@@ -59,7 +56,7 @@
     <footer>&hearts; Made with HTML, CSS & JavaScri(by using APIs).</footer>
     
 
-    <script src="codes.js"></script>
-    <script src="app.js"></script>
+    <script src="/calculatorRoot/codes.js"></script>
+    <script  src="/calculatorRoot/app.js" ></script>
 </body>
 </html>
