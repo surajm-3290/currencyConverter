@@ -4,17 +4,19 @@ const selectTo = document.querySelector("#selectTo");
 const btn = document.querySelector("#convert");
 const inputNum = document.querySelector("#fromInput");
 const outputNum = document.querySelector("#toOutput");
-const flagImage = document.querySelector(".FlagImg");
+const flagImageFrom = document.querySelector("#FlagImgFrom");
+const flagImageTO = document.querySelector("#FlagImgTO");
 let toConvert = 1;
 
+
 const flagBaseUrl = "https://flagsapi.com";
+
 for (let i in countryList) {
-    let img = `<img src="${flagBaseUrl}/${countryList[i]}/flat/64.png" alt="countryList[i]"> `;
-    let displayOption = `${img} ${countryList[i]}`
-    let optionfrom = new Option(displayOption, i);
+    let optionfrom = new Option(countryList[i], i);
     let optionto = new Option(countryList[i], i);
     selectFrom.add(optionfrom);
     selectTo.add(optionto);
+
 }
 
 inputNum.addEventListener('input', () => {
@@ -27,11 +29,24 @@ let toCode;
 
 selectFrom.addEventListener("change", (evt) => {
     fromCode = evt.target.value;
+    let index = selectFrom.selectedIndex;
+    let countryName = selectFrom.options[index].text;
+    console.log(countryName);
+    flagImageFrom.innerHTML = `<img src="https://flagsapi.com/${countryName}/flat/64.png" class="UrlImg">`
+
 })
 
 selectTo.addEventListener("change", (evt1) => {
     toCode = evt1.target.value;
+    let index = selectTo.selectedIndex;
+    let countryName = selectTo.options[index].text;
+    console.log(countryName);
+    flagImageTO.innerHTML = `<img src="https://flagsapi.com/${countryName}/flat/64.png" class="UrlImg">`
+
 })
+
+
+
 
 async function rate(){
     console.log("Getting data");
