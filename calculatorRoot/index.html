@@ -21,7 +21,7 @@
         <h1>
             Currency Converter
         </h1>
-        <p>Convert Currencies in real time with the latest exchange rates</p>
+        <p id="disciption">Convert Currencies in real time with the latest exchange rates</p>
         <div id="OuterFormContainer">
             <form>
                 <div class="fullcontainer">
@@ -51,8 +51,8 @@
                 </div>
                 <div class="rates">
                     <div id="perrate">
-                        <div class="tenor-gif-embed" data-postid="16142281" data-share-method="host" ><a href="https://tenor.com/view/osita-osita-iheme-nigerian-nollywood-calculating-gif-16142281">Osita Osita Iheme GIF</a>from <a href="https://tenor.com/search/osita-gifs">Osita GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-                        <!-- <p>1 <span class="fromvalue">USD</span> = <span class="exrate">95</span> <span id="tovalue">INR</span></p> -->
+                        <!-- <div class="tenor-gif-embed" data-postid="16142281" data-share-method="host" ><a href="https://tenor.com/view/osita-osita-iheme-nigerian-nollywood-calculating-gif-16142281">Osita Osita Iheme GIF</a>from <a href="https://tenor.com/search/osita-gifs">Osita GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> -->
+                        <p>1 <span class="fromValue">USD</span>  =  <span class="exrate">XX</span> <span class="toValue">INR</span></p>
                     
                     </div>
                     <button id="convert">Convert</button>
@@ -65,9 +65,9 @@
                 <div class="elemnentImage">
                     <i class="fa-solid fa-arrow-trend-down fa-flip-vertical fa-2xl" style="color: #7C5CFF;"></i>
                 </div>
-                <div>
+                <div class="belowBlockDetails">
                     <h4>Exchange Rate</h4>
-                    <p>1 <span class="fromvalue">USD</span> = <span class="exrate">95</span> <span id="tovalue">INR</span></p>
+                    <p>1 <span class="fromvalue">USD</span> = <span class="exrate">XX</span> <span class="toValue">INR</span></p>
                 </div>
             </div>
 
@@ -75,33 +75,33 @@
                 <div class="elemnentImage">
                     <i class="fa-solid fa-alarm-clock fa-2xl" style="color: #10B981;"></i>
                 </div>
-                <div>
+                <div class="belowBlockDetails">
                     <h4>Last Updated</h4>
-                    <p id="lastUpated"></p>    
+                    <p id="lastUpdated">Checking...</p>    
                 </div>
             </div>
             <div class="elementBox">
                 <div class="elemnentImage">
                     <i class="fa-solid fa-shield fa-2xl" style="color: #3B82F6;"></i>
                 </div>
-                <div>
+                <div class="belowBlockDetails">
                     <h4>Rate Source</h4>
-                    <p id="updatedDate">Frankfurter<br><span>Exchange rates and currency data API</span></p>    
+                    <p id="updatedDate">Frankfurter API</p>    
                 </div>
             </div>
             <div class="elementBox">
                 <div class="elemnentImage">
                     <i class="fa-solid fa-alarm-clock fa-2xl" style="color: #fbbf24;"></i>
                 </div>
-                <div>
+                <div class="belowBlockDetails">
                     <h4>Update Interval</h4>
-                    <p id="UpdateInterval">Exactly 24 hours<br>16:00 CET(Central European Time)</p>    
+                    <p id="UpdateInterval">Exactly 24 hours</p>    
                 </div>
             </div>
         </div>
 
     </main>
-    <footer>&hearts; Made with HTML, CSS & JavaScript(by using APIs).</footer>
+    <footer>&hearts; Made with HTML, CSS & JavaScript(using Fetch API).</footer>
     
 
     <script src="/calculatorRoot/codes.js"></script>

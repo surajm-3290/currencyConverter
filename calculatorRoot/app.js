@@ -7,8 +7,10 @@ const outputNum = document.querySelector("#toOutput");
 const flagImageFrom = document.querySelector("#FlagImgFrom");
 const flagImageTO = document.querySelector("#FlagImgTO");
 let toConvert = 1;
-
-
+const exRateBeforeBtn =  document.querySelector(".exrate");
+const fromBeforeBtn =  document.querySelector(".fromValue");
+const toBeforeBtn =  document.querySelector(".toValue");
+const lastUpdated = document.querySelector("#lastUpdated")
 const flagBaseUrl = "https://flagsapi.com";
 
 for (let i in countryList) {
@@ -23,7 +25,6 @@ inputNum.addEventListener('input', () => {
     toConvert = inputNum.value;
 });
 
-
 let fromCode;
 let toCode;
 
@@ -31,7 +32,7 @@ selectFrom.addEventListener("change", (evt) => {
     fromCode = evt.target.value;
     let index = selectFrom.selectedIndex;
     let countryName = selectFrom.options[index].text;
-    console.log(countryName);
+    fromBeforeBtn.innerText = evt.target.value;
     flagImageFrom.innerHTML = `<img src="https://flagsapi.com/${countryName}/flat/64.png" class="UrlImg">`
 
 })
@@ -40,11 +41,10 @@ selectTo.addEventListener("change", (evt1) => {
     toCode = evt1.target.value;
     let index = selectTo.selectedIndex;
     let countryName = selectTo.options[index].text;
-    console.log(countryName);
+    toBeforeBtn.innerText = evt1.target.value;
     flagImageTO.innerHTML = `<img src="https://flagsapi.com/${countryName}/flat/64.png" class="UrlImg">`
 
 })
-
 
 
 
@@ -54,7 +54,9 @@ async function rate(){
     let response = await fetch(URL);
     let data = await response.json();
     let result = data.rate;
+    exRateBeforeBtn.innerText = result;
     outputNum.value = toConvert * result ;
+    lastUpdated.innerText = `Date: ${data.date}`
     console.log(result);
     console.log(URL);
     }
