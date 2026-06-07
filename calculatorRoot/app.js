@@ -6,12 +6,12 @@ const inputNum = document.querySelector("#fromInput");
 const outputNum = document.querySelector("#toOutput");
 const flagImageFrom = document.querySelector("#FlagImgFrom");
 const flagImageTO = document.querySelector("#FlagImgTO");
+const displayBeforeBtn = document.querySelector(".outputDisplay");
+const belowExRate = document.querySelector("#exRate");
+const perRate = document.querySelector("#perrate");
 let toConvert = 1;
-const exRateBeforeBtn =  document.querySelector(".exrate");
-const fromBeforeBtn =  document.querySelector(".fromValue");
-const toBeforeBtn =  document.querySelector(".toValue");
-const lastUpdated = document.querySelector("#lastUpdated")
 const flagBaseUrl = "https://flagsapi.com";
+
 
 for (let i in countryList) {
     let optionfrom = new Option(countryList[i], i);
@@ -32,7 +32,6 @@ selectFrom.addEventListener("change", (evt) => {
     fromCode = evt.target.value;
     let index = selectFrom.selectedIndex;
     let countryName = selectFrom.options[index].text;
-    fromBeforeBtn.innerText = evt.target.value;
     flagImageFrom.innerHTML = `<img src="https://flagsapi.com/${countryName}/flat/64.png" class="UrlImg">`
 
 })
@@ -41,12 +40,16 @@ selectTo.addEventListener("change", (evt1) => {
     toCode = evt1.target.value;
     let index = selectTo.selectedIndex;
     let countryName = selectTo.options[index].text;
-    toBeforeBtn.innerText = evt1.target.value;
     flagImageTO.innerHTML = `<img src="https://flagsapi.com/${countryName}/flat/64.png" class="UrlImg">`
 
 })
 
+const paraStatus = document.createElement("p");
+paraStatus.textContent = "Calculating.....";
+paraStatus.className = "status";
 
+const paraOutput = document.createElement("p");
+paraOutput.className = "outputDisplay";
 
 async function rate(){
     console.log("Getting data");
@@ -54,11 +57,13 @@ async function rate(){
     let response = await fetch(URL);
     let data = await response.json();
     let result = data.rate;
-    exRateBeforeBtn.innerText = result;
-    outputNum.value = toConvert * result ;
-    lastUpdated.innerText = `Date: ${data.date}`
-    console.log(result);
-    console.log(URL);
+    let finalValue = toConvert * result ;
+    perRate.removeChild(paraStatus);
+    perRate.appendChild(paraOutput);
+    outputNum.value = finalValue.toFixed(2);
+    lastUpdated.innerText = `Date: ${data.date}`;
+    paraOutput.textContent = `${toConvert} ${fromCode}  =  ${finalValue.toFixed(2)} ${toCode}`;
+    belowExRate.innerText = `1 ${fromCode} = ${result.toFixed(3)} ${toCode}`;
     }
 
 // {
@@ -71,14 +76,15 @@ async function rate(){
 btn.addEventListener('click', (evt) => {
     evt.preventDefault();
     toConvert = Number(toConvert);
-    console.log(fromCode);
-    console.log(typeof fromCode);
-    console.log(toCode);
-    console.log(typeof toCode);
-    console.log(toConvert);
-    console.log(typeof toConvert);
-
+    if(perRate.childElementCount != 0){
+        perRate.replaceChildren();
+    }
+    perRate.appendChild(paraStatus);
     rate();
-    
 });
+
+const theme = document.querySelector("#theme");
+theme.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+})
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
     <link rel="stylesheet" href="/calculatorRoot/style.css">
+    <link rel="icon" href="/Assets/icon-img.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -12,7 +13,7 @@
         <nav>
             <h3><i class="fa-solid fa-calculator fa-xl" style="color: rgb(247, 247, 247);"></i> Currency Converter</h3>
             <div>
-                <i class="fa-solid fa-circle-half-stroke fa-lg" style="color: rgb(247, 247, 247);"></i>
+                <i class="fa-solid fa-circle-half-stroke fa-lg" id="theme" style="color: rgb(247, 247, 247);"></i>
                 <p id="language"><i class="fa-solid fa-language fa-lg" style="color: rgb(247, 247, 247);"></i> Eng</p>
             </div>
         </nav>
@@ -49,12 +50,11 @@
                         <input type="number" class="inputstyle" id="toOutput" placeholder='Press "Convert" Button To Display Amount' readonly>
                     </div>
                 </div>
+                <div id="perrate">
+                   
+                </div>
                 <div class="rates">
-                    <div id="perrate">
-                        <!-- <div class="tenor-gif-embed" data-postid="16142281" data-share-method="host" ><a href="https://tenor.com/view/osita-osita-iheme-nigerian-nollywood-calculating-gif-16142281">Osita Osita Iheme GIF</a>from <a href="https://tenor.com/search/osita-gifs">Osita GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script> -->
-                        <p>1 <span class="fromValue">USD</span>  =  <span class="exrate">XX</span> <span class="toValue">INR</span></p>
                     
-                    </div>
                     <button id="convert">Convert</button>
                 </div>
                 
@@ -67,7 +67,7 @@
                 </div>
                 <div class="belowBlockDetails">
                     <h4>Exchange Rate</h4>
-                    <p>1 <span class="fromvalue">USD</span> = <span class="exrate">XX</span> <span class="toValue">INR</span></p>
+                    <p id="exRate"> 1 CC = xx CC</p>
                 </div>
             </div>
 

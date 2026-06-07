@@ -11,7 +11,6 @@ body{
     justify-content: center;
     align-items: center;
     font-family: "Inter", sans-serif;
-    /* background-color: black; */
 }
 
 
@@ -61,7 +60,7 @@ nav div{
 #disciption{
     color: #3D4A6E;
     font-size: large;
-    margin: 10px;
+    margin: 10px 0 20px;
 }
 
 #theme{
@@ -92,9 +91,10 @@ main p{
 
 #OuterFormContainer{ 
     background-color: #ffff;
-    border: #D8DDF0 solid;
+    border:2px #D8DDF0 solid;
     margin: 20px 20% 35px;
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .fullcontainer{
@@ -110,20 +110,22 @@ main p{
 }
 
 .selectContainer{
-    /* border: 2px solid black; */
     display: flex;
-    margin: 10px 0;
+    margin: 15px 0 5px;
     display: flex;
     align-items: center;
-    height:max-content;
+    height: 55px;
     
 }
 
 select{
     width: 100%;
-    height: 100%;
+    height: 80%;
     padding: 10px;
-    font-size: medium;   
+    font-size: medium;
+    border-radius: 3px;
+    border-color: #D8DDF0;
+    
 }
 
 .FlagImg{
@@ -145,8 +147,16 @@ input[type="number"]{
     width: 92% ;
     margin: 10px 0;
     align-items: center;
-    margin-left: 5px;
+    margin-left: 3px;
+    border-radius: 3px;
+    border-color: #D8DDF0;
+    background-color: #F8F9FF;
     
+}
+
+input[type="number"]:focus{
+    outline: none;
+    border-color: #7C5CFF;
 }
 
 .rates{
@@ -156,6 +166,9 @@ input[type="number"]{
     
 }
 
+hr{
+    margin: 15px 0;
+}
 
 #convert{
     background-color: #1A235A;
@@ -165,13 +178,12 @@ input[type="number"]{
     cursor: pointer;
     width: 95%;
     font-size: large;
-    margin: 10px 0 20px;
+    margin: 15px 0 30px;
 }
 
 .belowElement{
-    /* border: 2px solid rgb(198, 81, 81); */
-    /* display: flex;
-    flex-direction: row; */
+    border: 2px solid #D8DDF0;
+    background-color: #ffff;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     align-items: center;
@@ -179,18 +191,18 @@ input[type="number"]{
     margin: 10px 20%;
     border-radius: 10px;
     height: 80px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .elementBox{
-    border: 2px solid black;
     height: 80px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    border-radius: 10px;
     align-items: center;
     text-align: center;
     font-size: medium;
+    border: 1px solid hsla(220, 9%, 46%, 0.088);
 }
 
 .belowBlockDetails h4{
@@ -204,8 +216,34 @@ input[type="number"]{
 }
 
 
-
 footer{
     color: #9CA3AF;
-    margin: 30px;
+    margin: 25px;
+}
+
+.dark-theme{
+    background-color: #8b8ea9;
+}
+
+/* #perrate{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+} */
+
+.outputDisplay{
+    height: 20px;
+    font-size: large;
+    color: #4BB543;
+}
+
+.status{
+    height: 20px;
+    font-size: large;
+    color: #D5B60A;
 }
