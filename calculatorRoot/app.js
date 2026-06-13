@@ -75,9 +75,14 @@ async function rate(){
 
 btn.addEventListener('click', (evt) => {
     evt.preventDefault();
+    console.log("Checking conditions");
+    
     if((toCode == undefined) || (fromCode == undefined)){
         alert("Select Country Code!!");
-    }else{
+    }else if(toCode == fromCode){
+        alert("You have done same Conunty Selection!!");
+    }
+    else{
         toConvert = Number(toConvert);
         if(perRate.childElementCount != 0){
             perRate.replaceChildren();

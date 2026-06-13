@@ -3,6 +3,8 @@
     padding: 0%;
 }
 
+/* @import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap'); */
+
 
 body{
     display: flex;
@@ -10,7 +12,7 @@ body{
     background-color: #F5F6FC;
     justify-content: center;
     align-items: center;
-    font-family: cursive;
+    font-family: gill-sans, sans-serif;
 }
 
 body {
@@ -34,6 +36,8 @@ header{
     padding: 10px;
     display: flex;
     align-items: center;
+    font-family: gill-sans, sans-serif;
+    font-size: large;
     
 }
 
@@ -59,7 +63,7 @@ nav div{
 #disciption{
     color: #3D4A6E;
     font-size: large;
-    margin: 10px 0 25px;
+    margin: 10px 0 30px;
 }
 
 #theme{
@@ -75,13 +79,15 @@ main{
     width:100%;
     align-items: center;
     justify-content: center;
+    font-family: gill-sans, sans-serif;
 }
 
-main h1{
-    margin-top: 20px;
+main h2{
+    margin-top: 35px;
     font-size: 40px;
     color: #1A235A;
     text-align: center;
+    
 }
 main p{
     text-align: center;
@@ -91,7 +97,7 @@ main p{
 #OuterFormContainer{ 
     background-color: #ffff;
     border:2px #D8DDF0 solid;
-    margin: 20px 20% 35px;
+    margin: 20px 20% 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -149,7 +155,7 @@ input[type="number"]{
     border-radius: 3px;
     border-color: #D8DDF0;
     background-color: #F8F9FF;
-    font-family: cursive;
+    font-family: sans-serif;
     
 }
 
@@ -177,7 +183,7 @@ hr{
     cursor: pointer;
     width: 95%;
     font-size: large;
-    margin: 15px 0 30px;
+    margin: 20px 0 30px;
     font-family: cursive;
 }
 
@@ -218,7 +224,7 @@ hr{
 
 footer{
     color: #9CA3AF;
-    margin: 25px 0 10px;
+    margin: 15px 0 10px;
 }
 
 .dark-theme{
@@ -229,6 +235,7 @@ footer{
     height: 20px;
     font-size: large;
     color: #4BB543;
+    font-family: sans-serif;
 }
 
 .status{
