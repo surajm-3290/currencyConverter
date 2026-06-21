@@ -18,7 +18,7 @@ A responsive web utility built with vanilla JavaScript to perform instant curren
 
 ## 🚀 Live Demo
 
-📹 Project Demonstration Video:
+📹 Project Demonstration Video:<br>
 LinkedIn Post: https://www.linkedin.com/posts/suraj-maurya-638829251_javascript-webdevelopment-frontenddevelopment-ugcPost-7474265511975866368-eM_V/
 
 ---
@@ -45,9 +45,9 @@ Open `index.html` in your browser.
 
 ---
 
-#👨‍💻 Author
+##👨‍💻 Author
 
-**Suraj Maurya**
+**Suraj Maurya**<br>
 LinkedIn: https://www.linkedin.com/in/suraj-maurya-638829251/
 
 ⭐ If you found this project useful, consider giving it a star.
