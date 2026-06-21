@@ -1,5 +1,6 @@
 const countryList = {
   AUD: "AU",
+  AED: "AE",
   BRL: "BR",
   CAD: "CA",
   CHF: "CH",

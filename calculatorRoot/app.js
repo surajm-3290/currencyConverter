@@ -51,20 +51,32 @@ paraStatus.className = "status";
 const paraOutput = document.createElement("p");
 paraOutput.className = "outputDisplay";
 
+
 async function rate(){
-    console.log("Getting data");
-    let URL = `https://api.frankfurter.dev/v2/rate/${fromCode}/${toCode}`;
-    let response = await fetch(URL);
-    let data = await response.json();
-    let result = data.rate;
-    let finalValue = toConvert * result ;
-    perRate.removeChild(paraStatus);
-    perRate.appendChild(paraOutput);
-    outputNum.value = finalValue.toFixed(2);
-    
-    paraOutput.textContent = `${toConvert} ${fromCode}  =  ${finalValue.toFixed(2)} ${toCode}`;
-    belowExRate.innerText = `1 ${fromCode} = ${result.toFixed(3)} ${toCode}`;
+    try{ 
+        console.log("Getting data");
+        let URL = `https://api.frankfurter.dev/v2/rate/${fromCode}/${toCode}`;
+        let response = await fetch(URL);
+
+        if(!response.ok){
+            throw new Error(`HTTPS Error Status: ${response.status}`);
+        }
+
+        let data = await response.json();
+        let result = data.rate;
+        let finalValue = toConvert * result ;
+        perRate.removeChild(paraStatus);
+        perRate.appendChild(paraOutput);
+        outputNum.value = finalValue.toFixed(2);
+        paraOutput.textContent = `${toConvert} ${fromCode}  =  ${finalValue.toFixed(2)} ${toCode}`;
+        belowExRate.innerText = `1 ${fromCode} = ${result.toFixed(3)} ${toCode}`;
+
+    }catch(error){
+        console.error("Fetch Operation failed: ", error.massage);
+        paraOutput.textContent = "Error loading Currency data!!\nPlease try again."
     }
+}
+    
 
 // {
 //   "date": "2026-06-01",
