@@ -16,14 +16,10 @@ A responsive web utility built with vanilla JavaScript to perform instant curren
 
 ---
 
-## 🎨 Design Tokens
+## 🚀 Live Demo
 
-| Component | UI Property | Hex Value |
-| :--- | :--- | :--- |
-| **Canvas Base** | Deep Radial Slate | `#0F172A` |
-| **App Container** | Obsidian Glass Card | `#1E293B` |
-| **Form Surfaces** | Interactive Inputs | `#334155` |
-| **Main Accent** | Vibrant Indigo Button | `#6366F1` |
+📹 Project Demonstration Video:
+LinkedIn Post: https://www.linkedin.com/posts/suraj-maurya-638829251_javascript-webdevelopment-frontenddevelopment-ugcPost-7474265511975866368-eM_V/
 
 ---
 
@@ -34,3 +30,24 @@ A responsive web utility built with vanilla JavaScript to perform instant curren
 ├── style.css      # Dark-glassmorphic styling configurations
 ├── codes.js       # Externalized country-to-currency code data module
 └── script.js      # Main asynchronous runtime engine
+```
+
+---
+
+## ⚙️ Run Locally
+
+```bash
+git clone https://github.com/surajm-3290/currencyConverter.git
+cd currencyConverter
+```
+
+Open `index.html` in your browser.
+
+---
+
+#👨‍💻 Author
+
+**Suraj Maurya**
+LinkedIn: https://www.linkedin.com/in/suraj-maurya-638829251/
+
+⭐ If you found this project useful, consider giving it a star.
