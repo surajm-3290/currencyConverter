@@ -1,6 +1,6 @@
 # 💱 Real-Time Currency Converter
 
-![Currency Converter UI Preview]
+Currency Converter UI Preview
 <img width="1919" height="887" alt="image" src="https://github.com/user-attachments/assets/3d737f64-2b72-407b-a9f3-febd068c4479" />
 
 A responsive web utility built with vanilla JavaScript to perform instant currency conversions using live exchange rates. This project highlights my transition from basic coding to handling live data streams and structured application design.
